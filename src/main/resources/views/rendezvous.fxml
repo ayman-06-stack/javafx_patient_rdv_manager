@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.RendezVousController">
+    <top>
+        <Label text="Gestion des Rendez-vous" style="-fx-font-size: 20px; -fx-font-weight: bold;" BorderPane.alignment="CENTER"/>
+    </top>
+
+    <center>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10" />
+            </padding>
+            <HBox spacing="10">
+                <TextField fx:id="tfPatientId" promptText="ID Patient"/>
+                <DatePicker fx:id="dpDate" />
+                <TextField fx:id="tfHeure" promptText="Heure (ex: 14:00)"/>
+            </HBox>
+
+            <TextArea fx:id="taDescription" promptText="Description" prefRowCount="2"/>
+
+            <HBox spacing="10">
+                <Button text="Rechercher" onAction="#rechercherRdv"/>
+                <Button text="Ajouter" onAction="#ajouterRdv"/>
+                <Button text="Modifier" onAction="#modifierRdv"/>
+                <Button text="Supprimer" onAction="#supprimerRdv"/>
+
+                <Label fx:id="lblErreur" textFill="red"/>
+
+            </HBox>
+
+            <TableView fx:id="tableRdv">
+                <columns>
+                    <TableColumn fx:id="colNom" text="Nom" prefWidth="100"/>
+                    <TableColumn fx:id="colPrenom" text="Prénom" prefWidth="100"/>
+
+                    <TableColumn fx:id="colDate" text="Date" prefWidth="100"/>
+                    <TableColumn fx:id="colNomPrenom" text="Patient" />
+                    <TableColumn fx:id="colHeure" text="Heure" prefWidth="100"/>
+                    <TableColumn fx:id="colDescription" text="Description" prefWidth="200"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+</BorderPane>

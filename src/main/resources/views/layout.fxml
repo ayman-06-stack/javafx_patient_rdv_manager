@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.LayoutController" prefWidth="800" prefHeight="500">
+
+    <!-- Menu de navigation -->
+    <left>
+        <VBox spacing="15" style="-fx-background-color: #2c3e50;" prefWidth="200">
+            <padding>
+                <Insets top="20.0" right="20.0" bottom="20.0" left="20.0" />
+            </padding>
+            <Label text="Clinique" style="-fx-font-size: 18px; -fx-text-fill: white; -fx-font-weight: bold;" />
+            <Button text="🏠 Dashboard" styleClass="menu-btn" onAction="#goDashboard"/>
+            <Button text="🧑 Patients" styleClass="menu-btn" onAction="#goPatients"/>
+            <Button text="📅 Rendez-vous" styleClass="menu-btn" onAction="#goRendezVous"/>
+            <Button text="🚪 Déconnexion" styleClass="menu-btn" onAction="#logout"/>
+            <Button text="👤 Mon Profil" styleClass="menu-btn" onAction="#goProfil"/>
+        </VBox>
+    </left>
+
+    <!-- Zone dynamique -->
+    <center>
+        <AnchorPane fx:id="mainContent" />
+    </center>
+</BorderPane>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.RegisterController" prefWidth="400" prefHeight="350">
+    <VBox spacing="10" layoutX="50" layoutY="40" prefWidth="300" prefHeight="280">
+        <Label text="Créer un compte" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+        <TextField fx:id="tfNom" promptText="Nom complet" />
+        <TextField fx:id="tfEmail" promptText="Email" />
+        <PasswordField fx:id="pfPassword" promptText="Mot de passe" />
+
+        <Label fx:id="lblInfo" textFill="green" />
+
+        <Button text="S'inscrire" onAction="#sInscrire" prefWidth="150"/>
+        <Hyperlink text="Déjà inscrit ? Connexion" onAction="#retourConnexion" />
+    </VBox>
+</AnchorPane>

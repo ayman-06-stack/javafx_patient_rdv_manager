@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.ProfilController" prefWidth="500" prefHeight="300" style="-fx-padding: 20;">
+    <VBox spacing="15">
+        <Label text="Mon Profil" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+        <HBox spacing="10">
+            <Label text="Nom :" prefWidth="100"/>
+            <Label fx:id="lblNom" />
+        </HBox>
+
+        <HBox spacing="10">
+            <Label text="Email :" prefWidth="100"/>
+            <Label fx:id="lblEmail" />
+        </HBox>
+
+        <Separator />
+
+        <Label text="Changer le mot de passe" style="-fx-font-weight: bold;" />
+
+        <PasswordField fx:id="pfAncien" promptText="Ancien mot de passe"/>
+        <PasswordField fx:id="pfNouveau" promptText="Nouveau mot de passe"/>
+        <PasswordField fx:id="pfConfirmation" promptText="Confirmer le nouveau mot de passe"/>
+
+        <Button text="Mettre à jour" onAction="#changerMotDePasse"/>
+        <Label fx:id="lblMessage" textFill="green"/>
+    </VBox>
+</AnchorPane>
